@@ -1,8 +1,10 @@
-package com.alexd.countriesapp;
+package com.alexd.countriesapp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.alexd.countriesapp.R;
 
 public class MainActivity extends AppCompatActivity {
 

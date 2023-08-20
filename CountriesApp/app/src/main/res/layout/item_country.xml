@@ -1,35 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="100dp">
-    
-    <ImageView
-        android:id="@+id/iv_country_image"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:padding="8dp"/>
-    
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="itemViewModel"
+            type="com.alexd.countriesapp.view.CountryItemViewModel" />
+    </data>
+
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
 
-        <TextView
-            android:id="@+id/tv_name"
-            style="@style/Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_country_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"/>
 
-        <TextView
-            android:id="@+id/tv_capital"
-            style="@style/Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/Title"
+                android:text="@{itemViewModel.getCountryName()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_capital"
+                style="@style/Text"
+                android:text="@{itemViewModel.getCapital()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</layout>

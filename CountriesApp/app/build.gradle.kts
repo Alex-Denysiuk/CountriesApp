@@ -32,7 +32,6 @@ android {
 }
 
 var lifecycleExtensionVersion = "1.1.1"
-var butterKnifeVersion = "10.1.0"
 var supportVersion = "29.0.0"
 var retrofitVersion = "2.3.0"
 var glideVersion = "4.9.0"
@@ -49,9 +48,6 @@ dependencies {
     implementation("com.android.support:design:$supportVersion")
 
     implementation("android.arch.lifecycle:extensions:$lifecycleExtensionVersion")
-
-    implementation("com.jakewharton:butterknife:$butterKnifeVersion")
-    annotationProcessor("com.javkewharton:butterknife-compiler:$butterKnifeVersion")
 
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")

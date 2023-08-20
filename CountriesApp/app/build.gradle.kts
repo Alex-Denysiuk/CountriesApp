@@ -31,6 +31,7 @@ android {
     }
 
     buildFeatures {
+        dataBinding = true
         viewBinding = true
     }
 
@@ -42,10 +43,10 @@ var glideVersion = "4.9.0"
 var rxJavaVersion = "2.1.1"
 var daggerVersion = "2.14.1"
 var mockitoVersion = "2.11.0"
+var kotlin_version = "1.8.0"
 
 dependencies {
 
-    implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
@@ -62,6 +63,8 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:$glideVersion")
 
     implementation("com.google.dagger:dagger:$daggerVersion")
+
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
 
     annotationProcessor("com.google.dagger:dagger-compiler:$daggerVersion")
     annotationProcessor("com.google.dagger:dagger-android-processor:$daggerVersion")

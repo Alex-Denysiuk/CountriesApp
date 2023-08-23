@@ -87,6 +87,7 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
         void bind(ItemViewModel itemViewModel) {
             this.itemRowBinding.setVariable(BR.itemViewModel, itemViewModel);
             this.itemRowBinding.executePendingBindings();
+
         }
     }
 }

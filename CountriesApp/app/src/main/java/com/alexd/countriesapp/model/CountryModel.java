@@ -1,9 +1,14 @@
 package com.alexd.countriesapp.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class CountryModel {
 
+    @SerializedName("name")
     private final String countryName;
+    @SerializedName("capital")
     private final String capital;
+    @SerializedName("flagPNG")
     private final String flag;
 
     public CountryModel(String countryName, String capital, String flag) {

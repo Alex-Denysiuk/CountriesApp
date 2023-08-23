@@ -3,6 +3,7 @@ package com.alexd.countriesapp.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
         this.binding.rvCountriesList.setLayoutManager(new LinearLayoutManager(this));
         this.binding.rvCountriesList.setAdapter(adapter);
 
+        this.binding.srlRefreshLayout.setOnRefreshListener(() -> {
+            viewModel.refresh();
+            this.binding.srlRefreshLayout.setRefreshing(false);
+        });
         this.observeViewModel();
     }
 

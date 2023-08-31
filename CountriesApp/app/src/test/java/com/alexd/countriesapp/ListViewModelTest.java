@@ -73,4 +73,15 @@ public class ListViewModelTest {
         assertEquals(false, this.viewModel.countryLoadError.getValue());
         assertEquals(false, this.viewModel.loading.getValue());
     }
+
+    @Test
+    public void testLoadCountriesFailed() {
+        this.testSingle = Single.error(new Throwable());
+        when(this.countriesService.getCountries()).thenReturn(this.testSingle);
+
+        this.viewModel.refresh();
+
+        assertEquals(true, this.viewModel.countryLoadError.getValue());
+        assertEquals(false, this.viewModel.loading.getValue());
+    }
 }
